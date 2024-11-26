@@ -33,3 +33,8 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'webappmsdev'
     publishLocation: 'pipeline'
+
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'msdas-devopsorg-devproject'
